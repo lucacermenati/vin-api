@@ -3,7 +3,7 @@ namespace src\Model;
 
 class Car
 {
-    private $datum_eerste_afgifte_nederland_dt;
+    private $datumEersteAfgifteNederlandDt;
     private $merk;
     private $handelsbenaming;
     private $fuels;
@@ -13,14 +13,14 @@ class Car
         $this->fuels = [];
     }
     
-    public function getDatum_eerste_afgifte_nederland_dt($datum_eerste_afgifte_nederland_dt)
+    public function getDatumEersteAfgifteNederlandDt($datumEersteAfgifteNederlandDt)
     {
-        return $this->datum_eerste_afgifte_nederland_dt;
+        return $this->$datumEersteAfgifteNederlandDt;
     }
     
-    public function setDatum_eerste_afgifte_nederland_dt($datum_eerste_afgifte_nederland_dt)
+    public function setDatumEersteAfgifteNederlandDt($datumEersteAfgifteNederlandDt)
     {
-        $this->datum_eerste_afgifte_nederland_dt = $datum_eerste_afgifte_nederland_dt;
+        $this->datumEersteAfgifteNederlandDt = $datumEersteAfgifteNederlandDt;
     }
     
     public function getMerk($merk)
@@ -33,14 +33,14 @@ class Car
         $this->merk = $merk;
     }
     
-    public function getHandelsbenaming($merk)
+    public function getHandelsbenaming($handelsbenaming)
     {
-        return $this->merk;
+        return $this->handelsbenaming;
     }
     
-    public function setHandelsbenaming($merk)
+    public function setHandelsbenaming($handelsbenaming)
     {
-        $this->merk = $merk;
+        $this->handelsbenaming = $handelsbenaming;
     }
     
     public function addFuel($fuel) 

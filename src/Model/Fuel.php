@@ -3,16 +3,16 @@ namespace src\Model;
 
 class Fuel
 {
-    private $brandstof_omschrijving;
+    private $brandstofOmschrijving;
     
-    public function getBrandstof_omschrijving($brandstof_omschrijving)
+    public function getBrandstofOmschrijving($brandstofOmschrijving)
     {
-        return $this->brandstof_omschrijving;
+        return $this->brandstofOmschrijving;
     }
     
-    public function setBrandstof_omschrijving($brandstof_omschrijving)
+    public function setBrandstofOmschrijving($brandstofOmschrijving)
     {
-        $this->brandstof_omschrijving = $brandstof_omschrijving;
+        $this->brandstofOmschrijving = $brandstofOmschrijving;
     }
 }
 

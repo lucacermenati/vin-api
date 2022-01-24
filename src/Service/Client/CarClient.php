@@ -6,17 +6,20 @@ use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use src\Model\Car;
 use src\Model\Fuel;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 
 class CarClient extends OverheidClient
 {
-    public function getInfo($plate)
+    public function getInfo($plate): Car
     {
-        return $this->parse($this->request("GET", $plate));
+        return $this->parse(
+            $this->request("GET", $plate)
+        );
     }
     
-    public function parse($response)
+    public function parse($response): Car
     {
-        $serializer = new Serializer([new ObjectNormalizer()], [new JsonEncoder()]);
+        $serializer = new Serializer([new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter())], [new JsonEncoder()]);
         $json = $serializer->decode($response, "json");
         
         /** @var Car $car **/
@@ -28,7 +31,6 @@ class CarClient extends OverheidClient
             );
         }
         
-        var_dump($car);
         return $car;
     }
 }

@@ -16,9 +16,8 @@ class CarController extends BaseController
     ): Response
     {
         try {
-            $this->setResponseSucceeded([
-                $client->getInfo($request->get("plate"))
-            ]);
+            $content = $client->getInfo($request->get("plate"));
+            $this->setResponseSucceeded($content);
         }
         catch (\Exception $exception) {
             $this->setResponseFailed(
