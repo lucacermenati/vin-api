@@ -13,9 +13,9 @@ class Car
         $this->fuels = [];
     }
     
-    public function getDatumEersteAfgifteNederlandDt($datumEersteAfgifteNederlandDt)
+    public function getDatumEersteAfgifteNederlandDt()
     {
-        return $this->$datumEersteAfgifteNederlandDt;
+        return $this->datumEersteAfgifteNederlandDt;
     }
     
     public function setDatumEersteAfgifteNederlandDt($datumEersteAfgifteNederlandDt)
@@ -23,7 +23,7 @@ class Car
         $this->datumEersteAfgifteNederlandDt = $datumEersteAfgifteNederlandDt;
     }
     
-    public function getMerk($merk)
+    public function getMerk()
     {
         return $this->merk;
     }
@@ -33,7 +33,7 @@ class Car
         $this->merk = $merk;
     }
     
-    public function getHandelsbenaming($handelsbenaming)
+    public function getHandelsbenaming()
     {
         return $this->handelsbenaming;
     }
@@ -41,6 +41,16 @@ class Car
     public function setHandelsbenaming($handelsbenaming)
     {
         $this->handelsbenaming = $handelsbenaming;
+    }
+    
+    public function getFuels()
+    {
+        return $this->fuels;
+    }
+    
+    public function setFuels($fuels)
+    {
+        $this->fuels = $fuels;
     }
     
     public function addFuel($fuel) 

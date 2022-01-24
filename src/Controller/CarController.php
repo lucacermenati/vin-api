@@ -4,7 +4,6 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Exception\ExceptionHandler;
-use App\Service\Client\OverheidClient;
 use App\Service\Client\CarClient;
 
 class CarController extends BaseController

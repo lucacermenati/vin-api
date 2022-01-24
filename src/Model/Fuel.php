@@ -5,7 +5,7 @@ class Fuel
 {
     private $brandstofOmschrijving;
     
-    public function getBrandstofOmschrijving($brandstofOmschrijving)
+    public function getBrandstofOmschrijving()
     {
         return $this->brandstofOmschrijving;
     }
